@@ -1,2 +1,87 @@
-*.agdai
-MAlonzo/**
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Build directories
+build/
+dist/
+out/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dependency directories
+jspm_packages/
+
+# Logs and databases
+*.log
+logs/
+*.sql
+*.sqlite
+
+# Testing
+coverage/
+.nyc_output/
+
+# Hardhat/Truffle artifacts
+artifacts/
+cache/
+typechain/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Backup files
+*.bak
+*.tmp
+*.old
+
+# Misc
+
+
+
+
+
+// Explanation of Key Entries:
+node_modules/: Ignore Node.js dependencies to avoid bloating the repository.
+
+.env: Ignore environment files to protect sensitive information like API keys.
+
+build/ and dist/: Ignore build output directories.
+
+.vscode/ and .idea/: Ignore IDE-specific files.
+
+.artifacts/ and cache/: Ignore Hardhat/Truffle build artifacts.
+
+coverage/: Ignore test coverage reports.
+
+.DS_Store and Thumbs.db: Ignore OS-specific hidden files.
+
+*.pid
+*.seed
+*.pid.lock
+
+
+How to Use:
+Create a new file in the root of your project named .gitignore.
+
+Copy and paste the content above into the file.
+
+Save the file, and Git will automatically ignore the specified files and directories.
