@@ -60,7 +60,7 @@ npx hardhat run scripts/deploy.js --network pi_network
 
 # Project Structure
 
-PiNFT-Nexus/
+NFT-Nexus/
 ├── client/                  # Frontend (React, Next.js, etc.)
 │   ├── public/              # Static assets
 │   ├── src/                 # React components
@@ -71,7 +71,7 @@ PiNFT-Nexus/
 │   └── package.json         # Frontend dependencies
 │
 ├── contracts/               # Smart contracts (Solidity)
-│   ├── PiNFT.sol            # NFT creation and minting contract
+│   ├── NFT.sol            # NFT creation and minting contract
 │   ├── Marketplace.sol      # NFT marketplace contract
 │   └── migrations/          # Deployment scripts
 │
@@ -127,17 +127,17 @@ The dApp uses Solidity smart contracts for NFT creation, minting, and marketplac
 
 // Deploy Contracts:
 
-Compile and deploy the PiNFT.sol and Marketplace.sol contracts to the Pi Network blockchain (or a testnet).
+Compile and deploy the NFT.sol and Marketplace.sol contracts to the Pi Network blockchain (or a testnet).
 
 Example deployment script:
 javascript -
 const hre = require('hardhat');
 
 async function main() {
-  const PiNFT = await hre.ethers.getContractFactory('PiNFT');
-  const piNFT = await PiNFT.deploy();
-  await piNFT.deployed();
-  console.log('PiNFT deployed to:', piNFT.address);
+  const NFT = await hre.ethers.getContractFactory('PiNFT');
+  const NFT = await NFT.deploy();
+  await NFT.deployed();
+  console.log('NFT deployed to:', NFT.address);
 }
 
 main().catch((error) => {
@@ -150,7 +150,7 @@ main().catch((error) => {
 Use Web3.js or Ethers.js to interact with the deployed contracts.
 
 Example:
-const contractABI = require('./contracts/PiNFT.json');
+const contractABI = require('./contracts/NFT.json');
 const contractAddress = '0xYourContractAddress';
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -158,7 +158,7 @@ const signer = provider.getSigner();
 const piNFTContract = new ethers.Contract(contractAddress, contractABI, signer);
 
 const mintNFT = async () => {
-  const tx = await piNFTContract.mintNFT('https://your-metadata-url.com');
+  const tx = await NFTContract.mintNFT('https://your-metadata-url.com');
   await tx.wait();
   console.log('NFT minted!');
 };
@@ -192,11 +192,11 @@ Unit Tests:
 Write unit tests for smart contracts using Hardhat or Truffle.
 
 Example:
-describe('PiNFT Contract', () => {
+describe('NFT Contract', () => {
   it('Should mint an NFT', async () => {
-    const tx = await piNFTContract.mintNFT('https://your-metadata-url.com');
+    const tx = await NFTContract.mintNFT('https://your-metadata-url.com');
     await tx.wait();
-    const balance = await piNFTContract.balanceOf(userAddress);
+    const balance = await NFTContract.balanceOf(userAddress);
     assert.equal(balance.toString(), '1');
   });
 });
