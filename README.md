@@ -1,5 +1,5 @@
-# NFT-Nexus
-NFT Nexus is a decentralized application (dApp) built on the Pi Network, enabling users to create, mint, and trade NFTs seamlessly. The platform includes an integrated marketplace, empowering creators and collectors to engage in the digital asset economy.
+# Moon Pi
+Moon Pi is a decentralized application (dApp) built on the Pi Network, enabling users to create, mint, and trade NFTs seamlessly. The platform includes an integrated marketplace, empowering creators and collectors to engage in the digital asset economy.
 
 # Features
 NFT Creation: Easily create unique digital assets using an intuitive interface.
@@ -38,8 +38,8 @@ MetaMask or Pi Wallet (for testing)
 
 # Installation
 Clone the repository:
-git clone https://github.com/AbztractBoy/NFT-Nexus.git
-cd NFT-Nexus
+git clone https://github.com/AbztractBoy/Moon-Pi.git
+cd Moon-Pi
 
 // Install dependencies:
 npm install
@@ -60,7 +60,7 @@ npx hardhat run scripts/deploy.js --network pi_network
 
 # Project Structure
 
-NFT-Nexus/
+Moon-Pi/
 ├── client/                  # Frontend (React, Next.js, etc.)
 │   ├── public/              # Static assets
 │   ├── src/                 # React components
@@ -236,4 +236,4 @@ Email: abztractboy@gmail.com
 
 GitHub: https://github.com/AbztractBoy/
 
-Website: dunno yet
+Website: in development
